@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class UserRepository {
+public class UsuarioRepository {
 
     public void save(Usuario usuario){
         if (usuario.getId()==null)
@@ -26,18 +26,18 @@ public class UserRepository {
     public List<Usuario> findAll(){
         System.out.println("List - Listando os usuários do sistema");
         List<Usuario> usuarios = new ArrayList<>();
-        usuarios.add(new Usuario("Alcides", "password"));
-        usuarios.add(new Usuario("Thiago", "masterpassword"));
+        usuarios.add(new Usuario("alcides", "password"));
+        usuarios.add(new Usuario("alcides", "masterpassword"));
         return usuarios;
     }
 
     public Usuario findById(Integer id){
         System.out.println(String.format("Find/id - Recebendo o id:  %d para localizar um usuário", id));
-        return new Usuario("Alcides", "password");
+        return new Usuario("alcides", "password");
     }
 
     public Usuario findByUsername(String username){
         System.out.println(String.format("Find/username - Recebendo o username:  %d para localizar um usuário", username));
-        return new Usuario("Alcides", "password");
+        return new Usuario("alcides", "password");
     }
 }
